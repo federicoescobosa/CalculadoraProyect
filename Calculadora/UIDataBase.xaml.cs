@@ -1,10 +1,4 @@
-﻿using Calculadora.Objetos;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Xamarin.Forms;
-using Calculadora.Firebase;
-using System.Collections;
+
 
 namespace Calculadora
 {
