@@ -1,12 +1,3 @@
-﻿using Android.OS;
-using Calculadora.Objetos;
-using Firebase.Database;
-using Firebase.Database.Query;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Calculadora.Firebase
@@ -20,7 +11,7 @@ namespace Calculadora.Firebase
         
         public FirebaseCrud()
         {
-            firebase = new FirebaseClient("https://calculadora-aac95.firebaseio.com/"); //Url del proyecto de firebase.
+            firebase = new FirebaseClient("URL FIREBASE"); //Url del proyecto de firebase.
             data = new DataBase();
             
         }
@@ -58,7 +49,7 @@ namespace Calculadora.Firebase
         
 
 
-
+        // Obtener todos los productos.
         public async Task<List<DataBase>> getAllProducts(int type)
         {
             return (await firebase.Child(Convert.ToString(type)).OnceAsync<DataBase>()).Select(item => new DataBase
