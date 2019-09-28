@@ -1,7 +1,4 @@
-﻿using Calculadora.Firebase;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Calculadora.Objetos
 {
