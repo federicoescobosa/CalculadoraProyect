@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Calculadora.UIDataBase">
+    <ContentPage.Content>
+
+        <StackLayout Spacing="0">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <!-- Cabecera-->    
+            <StackLayout HeightRequest="50" Grid.Row="0">
+                <Image Source="fondo3.jpg" />
+            </StackLayout>
+                
+             <!--Cuerpo-->   
+            <StackLayout BackgroundColor="#9c9c9c" Grid.Row="1">
+
+                <StackLayout>
+                    <Label Text="Base de datos" HorizontalOptions="Center" FontSize="20"/>
+                    <StackLayout Orientation="Horizontal">
+
+                        <Button x:Name="search" ImageSource="search.png" HorizontalOptions="Start" Margin="10,0,0,0" Clicked="Search_Clicked"/>
+                        <Button x:Name="add" ImageSource="plus2.png" HorizontalOptions="Start" Margin="10,0,0,0" Clicked="Add_Clicked"/>
+                        <Button x:Name="del" ImageSource="file.png" HorizontalOptions="Start" Margin="10,0,0,0" Clicked="Del_Clicked"/>
+                        <!--<Button x:Name="uptdate" ImageSource="update.png" HorizontalOptions="Start" Margin="10,0,0,0"/>-->
+                        </StackLayout>
+
+                </StackLayout>
+                    <StackLayout Margin="20">
+                        <Entry x:Name="cod" Placeholder="Código Artículo" HorizontalOptions="Center" Keyboard="Numeric" />
+                        <Entry x:Name="des" Placeholder="Descripción Artículo" HorizontalOptions="Center"/>
+                        <Picker x:Name="pack" Title="Tipo de formato" HorizontalOptions="Center" IsVisible="False"/>
+                        <Picker x:Name="prod" Title="Tipo de producto" HorizontalOptions="Center" Unfocused="Prod_Unfocused"/>
+                        <Picker x:Name="cap" Title="Formato" HorizontalOptions="Center" IsVisible="False"/>
+                        <Entry x:Name="cant" Placeholder="Cantidad" Keyboard="Numeric" HorizontalOptions="Center"/>
+                        <ListView x:Name="listado" BackgroundColor="LightGray" IsVisible="False" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate >
+                                    <TextCell>
+                                        
+                                        
+                                    </TextCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackLayout>
+                
+               
+
+            </StackLayout>
+            <!-- Pié -->
+            <StackLayout Grid.Row="2">
+
+                <Image Source="fondo3.jpg"/>
+            </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+   
+
+
+
+
+
+   
